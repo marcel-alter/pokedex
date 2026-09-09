@@ -50,7 +50,7 @@ func commandHelp(*config) error {
 	return nil
 }
 
-// MAP FUNCTIONS ↓↓↓↓↓↓↓
+// Command MAP FUNCTIONS ↓↓↓↓↓↓↓
 func mapStart() error {
 	baseURL := "https://pokeapi.co/api/v2/location-area/"
 	client := &http.Client{}
