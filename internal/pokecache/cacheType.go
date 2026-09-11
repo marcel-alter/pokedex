@@ -46,7 +46,6 @@ func (c Cache) reapLoop(interval time.Duration) {
 	defer ticker.Stop()
 	for {
 		<-ticker.C
-		// read lock could cause a bug!
 		c.mu.RLock()
 		var staleKeys []string
 		for key, value := range c.Entries {
