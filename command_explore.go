@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-func commandExplore(cfg *config, name string) error {
+func commandExplore(cfg *config, args ...string) error {
+	name := args[0]
 	DeepLocationsResp, err := cfg.pokeapiClient.ListPokemon(name)
 	if err != nil {
 		//fmt.Print("wrong command")
